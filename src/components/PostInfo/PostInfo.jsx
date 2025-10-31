@@ -5,12 +5,12 @@ import '../CommentList/CommentList.scss';
 import './PostInfo.scss';
 
 export const PostInfo = ({ post }) => (
-  <div className="PostInfo" key={post.id}>
+  <div className="PostInfo">
     <div className="PostInfo__header">
-      <h3 className="PostInfo__title">qui est esse</h3>
+      <h3 className="PostInfo__title">{post.title}</h3>
       <p>
         {' Posted by  '}
-        <UserInfo user={post.user} />
+        <UserInfo user={post.user} key={post.id} />
       </p>
     </div>
     <p className="PostInfo__body">{post.body}</p>
